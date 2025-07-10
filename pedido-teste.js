@@ -10,7 +10,7 @@ function add(){
     incTable(aluno,tamanho,turma);
 }
 
-function incTable(aluno,tamanho,turma){
+function incTable(aluno, tamanho, turma) {
     let table = document.querySelector('#table-lista-pedidos tbody');
 
     let tr          = document.createElement('tr');
@@ -28,17 +28,22 @@ function incTable(aluno,tamanho,turma){
     td_turma.innerText      = turma;
     td_valor.innerText      = getValorBRL(VALOR_CAMISA);
 
-    let icon_excluir    = document.createElement('i');
-    icon_excluir.className = 'fas fa-trash-can';
-    td_excluir.appendChild(icon_excluir);
+    let button_excluir = document.createElement('button');
+    button_excluir.className = 'btn btn-danger btn-sm';
+    button_excluir.innerHTML = '<i class="fas fa-trash-can"></i>';
+    button_excluir.onclick = function() {
+        tr.remove();
+        removeDB(total_registros);
+    };
+    td_excluir.appendChild(button_excluir);
 
     addDB({
-        id:total_registros,
-        aluno:aluno,
-        tamanho:tamanho,
-        turma:turma
+        id: total_registros,
+        aluno: aluno,
+        tamanho: tamanho,
+        turma: turma
     });
-    
+
     tr.appendChild(th_id);
     tr.appendChild(td_aluno);
     tr.appendChild(td_tamanho);

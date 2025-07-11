@@ -3,11 +3,23 @@ var total_registros = 1;
 var pedidos         = [];
 
 function add(){
-    let aluno       = document.querySelector('#aluno').value;
-    let tamanho     = document.querySelector('#tamanho').value;
-    let turma       = document.querySelector('#turma').value;
+    let aluno = document.querySelector('#aluno').value;
+    let tamanho = document.querySelector('#tamanho').value;
+    let turma = document.querySelector('#turma').value;
 
-    incTable(aluno,tamanho,turma);
+    // Validação para não permitir números no nome
+    if (/\d/.test(aluno)) {
+        alert('O nome do aluno não pode conter números!');
+        return;
+    }
+
+    // Validação para não permitir campo vazio
+    if (aluno.trim() === '') {
+        alert('Por favor, digite o nome do aluno!');
+        return;
+    }
+
+    incTable(aluno, tamanho, turma);
 }
 
 function incTable(aluno, tamanho, turma) {

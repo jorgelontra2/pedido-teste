@@ -1,0 +1,248 @@
+{
+  "id": "788e4823-9a4f-4f0a-9291-e1cbe30df9f6",
+  "version": "2.0",
+  "name": "pedido-teste",
+  "url": "http://127.0.0.1:5500/pedido-teste.html",
+  "tests": [{
+    "id": "d7cd554b-6500-4d6a-9cfe-451572eb1e1d",
+    "name": "CT1 - verificar o valor da camisa",
+    "commands": [{
+      "id": "67bffbfc-da45-4144-96a7-de77d81527f7",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/pedido-teste.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c88f0692-dc85-407c-924a-da9958325db6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "565x468",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "009e4714-43a8-49f6-87a1-1a76104449f9",
+      "comment": "",
+      "command": "click",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c512da6b-e371-4813-b9cf-9658ffb361c0",
+      "comment": "",
+      "command": "type",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Jorge henrique"
+    }, {
+      "id": "d87fe3ec-775b-48af-8f03-132508b1c5e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a34a69d3-8897-4fc8-8ea0-317bd7cc792d",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=total-pedido",
+      "targets": [
+        ["id=total-pedido", "id"],
+        ["css=#total-pedido", "css:finder"],
+        ["xpath=//th[@id='total-pedido']", "xpath:attributes"],
+        ["xpath=//table[@id='table-lista-pedidos']/tfoot/tr/th[2]", "xpath:idRelative"],
+        ["xpath=//tfoot/tr/th[2]", "xpath:position"],
+        ["xpath=//th[contains(.,'R$ 50,00')]", "xpath:innerText"]
+      ],
+      "value": "R$ 50,00"
+    }]
+  }, {
+    "id": "8ce50e60-dce7-4379-b421-b94b464704d7",
+    "name": "CT2 - verificar se o botâo de excluir funciona",
+    "commands": [{
+      "id": "7c74077a-cd32-4545-9117-8e600acf4d3c",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/pedido-teste.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34a6acff-772a-43b8-b2f4-f8b8a6627f69",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "565x468",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d699d7b9-ad59-4a50-88b7-56b9ce2ee485",
+      "comment": "",
+      "command": "click",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "88b8fb74-1a87-4070-8a73-5ac2b2972b2d",
+      "comment": "",
+      "command": "type",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "jorge henrique"
+    }, {
+      "id": "25772563-f94b-401a-a7a5-397b769f2111",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d91872e-973d-4bef-a544-2578b28d25d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fas",
+      "targets": [
+        ["css=.fas", "css:finder"],
+        ["xpath=//table[@id='table-lista-pedidos']/tbody/tr/td[5]/button/i", "xpath:idRelative"],
+        ["xpath=//i", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "b9bee1c9-a034-4f5d-a232-74d64e6a2ca5",
+    "name": "CT3 - verificar se o sistema não aceita valores numéricos",
+    "commands": [{
+      "id": "5b81ee8f-ffe7-4264-b79d-6ad25f0551b6",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/pedido-teste.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15db7f3a-b2b8-4422-9573-967dc4ca921a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "565x468",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e608bb2d-8097-4eef-b30b-eb084d0c2613",
+      "comment": "",
+      "command": "click",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ced83d11-8609-4f21-9dc0-8a978b57125e",
+      "comment": "",
+      "command": "type",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "jorge henrique2"
+    }, {
+      "id": "37cfa88e-7201-4538-b274-f62c3f2a8c0c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c643b90-48f6-448a-be1d-5e65f7bcae49",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "O nome do aluno não pode conter números!",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b286bb28-90da-4c92-a575-8126ed31b763",
+    "name": "CT4 - verificar se o nome esta vazio",
+    "commands": [{
+      "id": "39a4e48f-9b7c-425a-a023-a88a7c712819",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/pedido-teste.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91487139-0d73-4ca4-a33d-65b9a6843772",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "565x468",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9dd856c6-79ee-4482-94c1-5a0a88f7ae2d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "482739ca-521f-460f-8dbd-25a4d7506b5a",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Por favor, digite o nome do aluno!",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "cbbea82d-d8cf-40b9-95f6-c427c6a59793",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d7cd554b-6500-4d6a-9cfe-451572eb1e1d"]
+  }],
+  "urls": ["http://127.0.0.1:5500/pedido-teste.html"],
+  "plugins": []
+}
